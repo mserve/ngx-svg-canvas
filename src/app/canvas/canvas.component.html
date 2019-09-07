@@ -1,0 +1,19 @@
+<div id="canvas-container">
+  <div id="canvas-tools">
+    <div class="color-swatch">
+      <span class="color" *ngFor="let color of colorPalette" [style.background-color]='color'
+        (click)='setColor(color)'></span>
+    </div>
+    <div class="line-swatch">
+      <span class="line-container" *ngFor="let line of lineSizes" (click)='setLineWidth(line)'>
+        <span class="line" [style.border-width]='line + "px"'></span>
+      </span>
+    </div>
+    <div class="tool-swatch">
+      <span class="tool-container" (click)="clear()"><span class="tool">X</span></span>
+      <span class="tool-container" (click)="save()"><span class="tool">S</span></span>
+    </div>
+
+  </div>
+  <div id="canvas" #canvas (panstart)="startPan($event)" (pan)="pan($event)" (panend)="endPan($event)"></div>
+</div>

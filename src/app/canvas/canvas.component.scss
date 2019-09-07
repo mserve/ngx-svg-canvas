@@ -1,0 +1,65 @@
+#canvas-container {
+  display:flex;
+  flex-direction: row;
+  position: fixed;
+  height:100%;
+  width:100%;
+  min-width: 100%;
+  min-height: 100%;
+  padding: 0;
+}
+
+#canvas-tools {
+  background-color: rgb(200,200,200);
+  min-width: 3em;
+  box-shadow: 0.2em 0 0.2em 0 rgba(0, 0, 0, 0.25);
+}
+
+div.line-swatch, div.tool-swatch{
+  margin-top:1em;
+}
+
+div.color-swatch, div.line-swatch,  div.tool-swatch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+span.color {
+  display: inline-block;
+  border-radius:1em;
+  width:2em;
+  height:2em;
+  line-height:2em;
+  box-shadow: 0.1em 0.1em 0.1em 0 rgba(0, 0, 0, 0.25);
+  margin:0.2em;
+}
+span.line-container, span.tool-container {
+  display: inline-block;
+  flex-basis:2em;
+  border-radius: 1em;
+  width:2em;
+  margin:0.2em;
+
+  display: flex;
+  align-items: center;
+  box-shadow: 0.1em 0.1em 0.1em 0 rgba(0, 0, 0, 0.25);
+  background-color:rgba(255,255,255,0.5);
+}
+
+span.line, span.tool {
+  display: inline-block;
+  text-align: center;
+  width:2em;
+  margin:0.2em;
+}
+
+span.line  {
+  border-color:black;
+  border-bottom-style: solid;
+  box-shadow: 0.1em 0.1em 0.1em 0 rgba(0, 0, 0, 0.25);
+}
+
+#canvas {
+  flex-grow: 1;
+}
