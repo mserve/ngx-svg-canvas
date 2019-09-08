@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { AngularResizedEventModule } from 'angular-resize-event';
+
 import { AppComponent } from './app.component';
 import { CanvasComponent } from './canvas/canvas.component';
 
@@ -10,7 +12,8 @@ import { CanvasComponent } from './canvas/canvas.component';
     CanvasComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AngularResizedEventModule
   ],
   providers: [],
   bootstrap: [AppComponent]

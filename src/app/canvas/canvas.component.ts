@@ -7,8 +7,9 @@ import {
   Input
 } from '@angular/core';
 
-import { CanvasMode } from './canvas-mode';
+import { ResizedEvent } from 'angular-resize-event';
 
+import { CanvasMode } from './canvas-mode';
 import * as Two from 'twojs-ts';
 import * as two from 'twojs-ts/two.min';
 import * as downloadjs from 'downloadjs';
@@ -82,7 +83,8 @@ export class CanvasComponent implements OnInit, AfterViewInit {
     const localTwo = new two({
       type: two.Types.canvas,
       width: this.two.width,
-      height: this.two.height
+      height: this.two.height,
+      ratio: 1.0
     }) as Two.Two;
 
     // Copy scene (object by object)
@@ -132,8 +134,12 @@ export class CanvasComponent implements OnInit, AfterViewInit {
     this._mode = mode;
   }
 
+  onResized(e: ResizedEvent) {
+    this.two.width = this.canvas.nativeElement.offsetWidth;
+    this.two.height = this.canvas.nativeElement.offsetHeight;
+  }
 
-  startPan(e: any) {
+  onPanStart(e: HammerInput) {
     e.preventDefault();
 
     // Get current cursor position
@@ -144,7 +150,7 @@ export class CanvasComponent implements OnInit, AfterViewInit {
     this.handleStart(x, y);
   }
 
-  pan(e: any) {
+  onPan(e: HammerInput) {
     e.preventDefault();
 
     // Get position
@@ -155,7 +161,7 @@ export class CanvasComponent implements OnInit, AfterViewInit {
   }
 
 
-  endPan(e: any) {
+  onPanEnd(e: HammerInput) {
     e.preventDefault();
 
     // Get position
@@ -319,7 +325,7 @@ export class CanvasComponent implements OnInit, AfterViewInit {
       this.currentObject.noFill().stroke = this.lineColor;
       this.currentObject.linewidth = this.lineWidth;
     } else {
-      this.currentObject.width  = 4 * rx;
+      this.currentObject.width = 4 * rx;
       this.currentObject.height = 4 * ry;
     }
   }
@@ -337,17 +343,19 @@ export class CanvasComponent implements OnInit, AfterViewInit {
 
   /* remove parent object offset X */
   private removeOffsetX(x: number) {
+    // Limit to nativeElement
     return this.limit(x - this.canvas.nativeElement.getBoundingClientRect().left, 0,
       this.canvas.nativeElement.getBoundingClientRect().width);
   }
 
   /* remove parent object offset Y */
   private removeOffsetY(y: number) {
+    // Limit to nativeElement
     return this.limit(y - this.canvas.nativeElement.getBoundingClientRect().top, 0,
       this.canvas.nativeElement.getBoundingClientRect().height);
   }
 
-  /* limit a value */
+  /* limit a value between two boundaries */
   private limit(v, minVal, maxVal) {
     return (v >= minVal ? (v <= maxVal ? v : maxVal) : minVal);
   }
@@ -360,6 +368,7 @@ export class CanvasComponent implements OnInit, AfterViewInit {
   }
 
 
+  /* Init canvas after DOM loaded */
   ngAfterViewInit(): void {
     /* canvas element */
     const localCanvas = this.canvas.nativeElement;
@@ -373,6 +382,7 @@ export class CanvasComponent implements OnInit, AfterViewInit {
       height: this.canvas.nativeElement.offsetHeight
     }).appendTo(localCanvas);
 
+    /* set lastPoint */
     this.lastPoint = new two.Vector();
 
     /* Generate grid */

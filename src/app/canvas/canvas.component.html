@@ -21,5 +21,5 @@
     </div>
 
   </div>
-  <div id="canvas" #canvas (panstart)="startPan($event)" (pan)="pan($event)" (panend)="endPan($event)"></div>
+  <div id="canvas" #canvas (resized)="onResized($event)" (panstart)="onPanStart($event)" (pan)="onPan($event)" (panend)="onPanEnd($event)"></div>
 </div>
