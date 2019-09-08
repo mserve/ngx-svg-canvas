@@ -1,11 +1,17 @@
 <div id="canvas-container">
   <div id="canvas-tools">
+    <div class="tool-swatch">
+      <span class="tool-container" (click)="this.mode = this.modes.Pencil"><span class="tool">P</span></span>
+      <span class="tool-container" (click)="this.mode = this.modes.Rectangle"><span class="tool">R</span></span>
+      <span class="tool-container" (click)="this.mode = this.modes.Elipse"><span class="tool">E</span></span>
+      <span class="tool-container" (click)="this.mode = this.modes.Line"><span class="tool">L</span></span>
+    </div>
     <div class="color-swatch">
       <span class="color" *ngFor="let color of colorPalette" [style.background-color]='color'
-        (click)='setColor(color)'></span>
+        (click)='this.lineColor = color'></span>
     </div>
     <div class="line-swatch">
-      <span class="line-container" *ngFor="let line of lineSizes" (click)='setLineWidth(line)'>
+      <span class="line-container" *ngFor="let line of lineSizes" (click)='this.lineWidth = line'>
         <span class="line" [style.border-width]='line + "px"'></span>
       </span>
     </div>
