@@ -7,12 +7,12 @@
       <span class="tool-container" (click)="this.mode = this.modes.Line"><span class="tool">L</span></span>
     </div>
     <div class="color-swatch">
-      <span class="color" *ngFor="let color of colorPalette" [style.background-color]='color'
+      <span class="color" *ngFor="let color of colorPalette" [style.background-color]="color"
         (click)='this.lineColor = color'></span>
     </div>
     <div class="line-swatch">
-      <span class="line-container" *ngFor="let line of lineSizes" (click)='this.lineWidth = line'>
-        <span class="line" [style.border-width]='line + "px"'></span>
+      <span class="line-container" *ngFor="let line of lineSizes" (click)="this.lineWidth = line">
+        <span class="line" [style.border-width]="line + 'px'"></span>
       </span>
     </div>
     <div class="tool-swatch">
@@ -21,5 +21,6 @@
     </div>
 
   </div>
-  <div id="canvas" #canvas (resized)="onResized($event)" (panstart)="onPanStart($event)" (pan)="onPan($event)" (panend)="onPanEnd($event)"></div>
+  <div id="canvas" #canvas (resized)="onResized($event)" (panstart)="onPanStart($event)" (pan)="onPan($event)"
+    (panend)="onPanEnd($event)"></div>
 </div>

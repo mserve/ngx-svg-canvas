@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ngx-svg-canvas": {
+    "ngx-svg-canvas-demo": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -124,6 +124,47 @@
           }
         }
       }
-    }},
-  "defaultProject": "ngx-svg-canvas"
+    },
+    "ngx-svg-canvas": {
+      "root": "projects/ngx-svg-canvas",
+      "sourceRoot": "projects/ngx-svg-canvas/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ngx-svg-canvas/tsconfig.lib.json",
+            "project": "projects/ngx-svg-canvas/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "projects/ngx-svg-canvas/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-svg-canvas/src/test.ts",
+            "tsConfig": "projects/ngx-svg-canvas/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-svg-canvas/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngx-svg-canvas/tsconfig.lib.json",
+              "projects/ngx-svg-canvas/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "ngx-svg-canvas-demo"
 }

@@ -7,6 +7,8 @@ import {
   Input
 } from '@angular/core';
 
+import 'hammerjs';
+
 import { ResizedEvent } from 'angular-resize-event';
 
 import { CanvasMode } from './canvas-mode';

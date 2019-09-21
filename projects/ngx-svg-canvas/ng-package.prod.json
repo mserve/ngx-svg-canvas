@@ -1,0 +1,15 @@
+{
+  "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
+  "dest": "../../dist/ngx-svg-canvas",
+  "whitelistedNonPeerDependencies": [
+    "downloadjs",
+    "hammerjs",
+    "twojs-ts"
+  ],
+  "lib": {
+    "entryFile": "./src/public_api.ts",
+    "umdModuleIds": {
+      "ngx-svg-canvas": "ngx-svg-canvas"
+    }
+  }
+}
