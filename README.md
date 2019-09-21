@@ -1,27 +1,176 @@
-# ngx-svg-cancas
+# ngx-svg-canvas
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.2.
+## Table of contents 
+1. [Getting Started](#getting-started)
+2. [Latest Update](#latest-update)
+3. [Installation](#installation)
+4. [API](#api)
 
-## Development server
+# Getting Started
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+ngx-svg-canvas is a whiteboard component for Angular 8.x+ applications. It uses Two.js to render your drawings to an SVG canvas. Exports can be downloaded as SVG.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```
+<ngx-svg-canvas [gridSize]='30'></ngx-svg-canvas>
+```
 
-## Build
+# Latest Update
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running unit tests
+# Installation
+```
+npm install @m-serve/ngx-svg-canvas --save
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+# API
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
+## Component:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+the `ngx-svg-canvas` component supports the following input properties:
+
+    | Input | Type | Default | Description |
+    | ----- | ---- | ------- | ----------- |
+    | gridSize | number | `0` | size of the background grid, hidden if `0` |
+
+# Demo
+You can clone the repo and then launch a demo page in your local machine:
+```bash
+npm install
+npm run demo
+
+The demo page server is listening to: http://localhost:4203
+# ngx-svg-canvas
+
+## Table of contents 
+1. [Getting Started](#getting-started)
+2. [Latest Update](#latest-update)
+3. [Installation](#installation)
+4. [API](#api)
+
+# Getting Started
+
+ngx-svg-canvas is a whiteboard component for Angular 8.x+ applications. It uses Two.js to render your drawings to an SVG canvas. Exports can be downloaded as SVG.
+
+
+```
+<ngx-svg-canvas [gridSize]='30'></ngx-svg-canvas>
+```
+
+# Latest Update
+
+
+# Installation
+```
+npm install @m-serve/ngx-svg-canvas --save
+```
+
+
+# API
+
+
+## Component:
+
+the `ngx-svg-canvas` component supports the following input properties:
+
+    | Input | Type | Default | Description |
+    | ----- | ---- | ------- | ----------- |
+    | gridSize | number | `0` | size of the background grid, hidden if `0` |
+
+# Demo
+You can clone the repo and then launch a demo page in your local machine:
+```bash
+npm install
+npm run demo
+
+The demo page server is listening to: http://localhost:4203
+# ngx-svg-canvas
+
+## Table of contents 
+1. [Getting Started](#getting-started)
+2. [Latest Update](#latest-update)
+3. [Installation](#installation)
+4. [API](#api)
+
+# Getting Started
+
+ngx-svg-canvas is a whiteboard component for Angular 8.x+ applications. It uses Two.js to render your drawings to an SVG canvas. Exports can be downloaded as SVG.
+
+
+```
+<ngx-svg-canvas [gridSize]='30'></ngx-svg-canvas>
+```
+
+# Latest Update
+
+
+# Installation
+```
+npm install @m-serve/ngx-svg-canvas --save
+```
+
+
+# API
+
+
+## Component:
+
+the `ngx-svg-canvas` component supports the following input properties:
+
+    | Input | Type | Default | Description |
+    | ----- | ---- | ------- | ----------- |
+    | gridSize | number | `0` | size of the background grid, hidden if `0` |
+
+# Demo
+You can clone the repo and then launch a demo page in your local machine:
+```bash
+npm install
+npm run demo
+
+The demo page server is listening to: http://localhost:4203
+# ngx-svg-canvas
+
+## Table of contents 
+1. [Getting Started](#getting-started)
+2. [Latest Update](#latest-update)
+3. [Installation](#installation)
+4. [API](#api)
+
+# Getting Started
+
+ngx-svg-canvas is a whiteboard component for Angular 8.x+ applications. It uses Two.js to render your drawings to an SVG canvas. Exports can be downloaded as SVG.
+
+
+```
+<ngx-svg-canvas [gridSize]='30'></ngx-svg-canvas>
+```
+
+# Latest Update
+
+
+# Installation
+```
+npm install @m-serve/ngx-svg-canvas --save
+```
+
+
+# API
+
+
+## Component:
+
+the `ngx-svg-canvas` component supports the following input properties:
+
+    | Input | Type | Default | Description |
+    | ----- | ---- | ------- | ----------- |
+    | gridSize | number | `0` | size of the background grid, hidden if `0` |
+
+# Demo
+You can clone the repo and then launch a demo page in your local machine:
+```bash
+npm install
+npm run demo
+
+The demo page server is listening to: http://localhost:4203
