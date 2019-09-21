@@ -1,10 +1,21 @@
 {
+  "$schema": "./node_modules/ng-packagr/package.schema.json",
   "name": "@mserve/ngx-svg-canvas",
   "version": "0.0.1",
   "description": "SVG based Whiteboard Canvas Angular Applications",
   "ngPackage": {
+    "dest": "./build/",
+    "whitelistedNonPeerDependencies": [
+      "angular",
+      "downloadjs",
+      "hammerjs",
+      "twojs-ts"
+    ],
     "lib": {
-      "entryFile": "public_api.ts"
+      "entryFile": "./src/public_api.ts",
+      "umdModuleIds": {
+        "ngx-svg-canvas": "ngx-svg-canvas"
+      }
     }
   },
   "scripts": {
@@ -23,10 +34,10 @@
     "angular-resize-event": "^1.1.0",
     "downloadjs": "^1.4.7",
     "hammerjs": "^2.0.8",
-    "tslib": "^1.10.0",
     "twojs-ts": "^0.7.0"
   },
   "devDependencies": {
+    "tslib": "^1.10.0",
     "@angular/forms": "~8.2.4",
     "@angular/platform-browser": "~8.2.4",
     "@angular/platform-browser-dynamic": "~8.2.4",

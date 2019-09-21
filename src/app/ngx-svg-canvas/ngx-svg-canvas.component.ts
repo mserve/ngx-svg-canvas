@@ -12,19 +12,22 @@ import { ResizedEvent } from 'angular-resize-event';
 import { CanvasMode } from './canvas-mode';
 import * as Two from 'twojs-ts';
 import * as two from 'twojs-ts/two.min';
-import * as downloadjs from 'downloadjs';
+import downloadjs from 'downloadjs';
 
 @Component({
-  selector: 'app-canvas',
-  templateUrl: './canvas.component.html',
-  styleUrls: ['./canvas.component.scss']
+  // tslint:disable-next-line:component-selector
+  selector: 'ngx-svg-canvas',
+  templateUrl: './ngx-svg-canvas.component.html',
+  styleUrls: ['./ngx-svg-canvas.component.scss']
 })
-export class CanvasComponent implements OnInit, AfterViewInit {
+export class NgxSvgCanvasComponent implements OnInit, AfterViewInit {
 
 
   @Input() gridSize: number;
   @Input() gridColor: string;
+  // tslint:disable-next-line:variable-name
   private _lineWidth: number;
+  // tslint:disable-next-line:variable-name
   private _lineColor: string;
 
   public readonly modes = CanvasMode;
@@ -63,6 +66,7 @@ export class CanvasComponent implements OnInit, AfterViewInit {
   private line: any;
   private lastPoint: any;
   private currentObject: any;
+  // tslint:disable-next-line:variable-name
   private _mode: CanvasMode;
 
   constructor() { }
@@ -400,7 +404,7 @@ export class CanvasComponent implements OnInit, AfterViewInit {
       localTwo.update();
 
       this.canvas.nativeElement.style.background = 'url(' + localTwo.renderer.domElement.toDataURL('image/png') + ') 0 0 repeat';
-      this.canvas.nativeElement.style.backgroundSize = this.gridSize + 'px ' + this.gridSize + 'px'
+      this.canvas.nativeElement.style.backgroundSize = this.gridSize + 'px ' + this.gridSize + 'px';
 
     }
 

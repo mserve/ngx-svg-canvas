@@ -2,18 +2,18 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AngularResizedEventModule } from 'angular-resize-event';
+import { NgxSvgCanvasModule } from './ngx-svg-canvas/ngx-svg-canvas.module';
 
 import { AppComponent } from './app.component';
-import { CanvasComponent } from './canvas/canvas.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    CanvasComponent
-  ],
+    AppComponent
+    ],
   imports: [
     BrowserModule,
-    AngularResizedEventModule
+    AngularResizedEventModule,
+    NgxSvgCanvasModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CanvasComponent } from './canvas.component';
+import { NgxSvgCanvasComponent } from './ngx-svg-canvas.component';
 
-describe('CanvasComponent', () => {
-  let component: CanvasComponent;
-  let fixture: ComponentFixture<CanvasComponent>;
+describe('NgxSvgCanvasComponent', () => {
+  let component: NgxSvgCanvasComponent;
+  let fixture: ComponentFixture<NgxSvgCanvasComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CanvasComponent ]
+      declarations: [ NgxSvgCanvasComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CanvasComponent);
+    fixture = TestBed.createComponent(NgxSvgCanvasComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
