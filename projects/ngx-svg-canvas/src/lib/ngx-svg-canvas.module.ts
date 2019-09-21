@@ -13,6 +13,7 @@ import { AngularResizedEventModule } from 'angular-resize-event';
 
   ],
   exports: [CommonModule,
-    NgxSvgCanvasComponent]
+    NgxSvgCanvasComponent,
+    AngularResizedEventModule]
 })
 export class NgxSvgCanvasModule { }
