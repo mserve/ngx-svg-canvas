@@ -1,24 +1,45 @@
-# NgxSvgCanvas
+# ngx-svg-canvas
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.4.
+## Table of contents 
+1. [Getting Started](#getting-started)
+2. [Latest Update](#latest-update)
+3. [Installation](#installation)
+4. [API](#api)
 
-## Code scaffolding
+# Getting Started
 
-Run `ng generate component component-name --project ngx-svg-canvas` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ngx-svg-canvas`.
-> Note: Don't forget to add `--project ngx-svg-canvas` or else it will be added to the default project in your `angular.json` file. 
+ngx-svg-canvas is a whiteboard component for Angular 8.x+ applications. It uses Two.js to render your drawings to an SVG canvas. Exports can be downloaded as SVG.
 
-## Build
 
-Run `ng build ngx-svg-canvas` to build the project. The build artifacts will be stored in the `dist/` directory.
+```
+<ngx-svg-canvas [gridSize]='30'></ngx-svg-canvas>
+```
 
-## Publishing
+# Latest Update
 
-After building your library with `ng build ngx-svg-canvas`, go to the dist folder `cd dist/ngx-svg-canvas` and run `npm publish`.
 
-## Running unit tests
+# Installation
+```
+npm install @m-serve/ngx-svg-canvas --save
+```
 
-Run `ng test ngx-svg-canvas` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Further help
+# API
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Component:
+
+the `ngx-svg-canvas` component supports the following input properties:
+
+  | Input | Type | Default | Description |
+  | ----- | ---- | ------- | ----------- |
+  | gridSize | number | `0` | size of the background grid, hidden if `0` |
+  | gridColor | string | `#6dcff6` | color of the grid, if enabled |
+
+# Demo
+You can clone the repo and then launch a demo page in your local machine:
+```bash
+npm install
+npm run demo
+
+The demo page server is listening to: http://localhost:4203

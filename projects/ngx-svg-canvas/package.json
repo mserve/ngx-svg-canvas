@@ -1,6 +1,6 @@
 {
   "name": "@mserve/ngx-svg-canvas",
-  "version": "0.0.1",
+  "version": "0.2.0-beta.0",
   "description": "SVG based Angular Whiteboard Canvas Module",
   "author": "Martin Schleyer",
   "license": "MIT",
