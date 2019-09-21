@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AngularResizedEventModule } from 'angular-resize-event';
-import { NgxSvgCanvasModule } from './ngx-svg-canvas/ngx-svg-canvas.module';
+import { NgxSvgCanvasModule } from '../../projects/ngx-svg-canvas/src/public_api';
 
 import { AppComponent } from './app.component';
 
