@@ -11,14 +11,24 @@
     "moduleResolution": "node",
     "importHelpers": true,
     "target": "es5",
-    "types": [ "twojs-ts" ],
+    "types": [
+      "twojs-ts"
+    ],
     "typeRoots": [
       "node_modules/@types"
     ],
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ngx-svg-canvas": [
+        "dist/ngx-svg-canvas"
+      ],
+      "ngx-svg-canvas/*": [
+        "dist/ngx-svg-canvas/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,

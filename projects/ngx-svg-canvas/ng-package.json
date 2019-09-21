@@ -1,15 +1,12 @@
 {
   "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
-  "dest": "../../build/ngx-svg-canvas",
+  "dest": "../../dist/ngx-svg-canvas",
   "whitelistedNonPeerDependencies": [
     "angular-resize-event",
     "downloadjs",
     "twojs-ts"
   ],
   "lib": {
-    "entryFile": "./src/public_api.ts",
-    "umdModuleIds": {
-      "ngx-svg-canvas": "ngx-svg-canvas"
-    }
+    "entryFile": "src/public-api.ts"
   }
 }

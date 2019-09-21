@@ -126,21 +126,16 @@
       }
     },
     "ngx-svg-canvas": {
+      "projectType": "library",
       "root": "projects/ngx-svg-canvas",
       "sourceRoot": "projects/ngx-svg-canvas/src",
-      "projectType": "library",
-      "prefix": "lib",
+      "prefix": "",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
             "tsConfig": "projects/ngx-svg-canvas/tsconfig.lib.json",
             "project": "projects/ngx-svg-canvas/ng-package.json"
-          },
-          "configurations": {
-            "production": {
-              "project": "projects/ngx-svg-canvas/ng-package.prod.json"
-            }
           }
         },
         "test": {

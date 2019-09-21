@@ -11,13 +11,14 @@ import 'hammerjs';
 
 import { ResizedEvent } from 'angular-resize-event';
 
+
 import { CanvasMode } from './canvas-mode';
 import * as Two from 'twojs-ts';
 import * as two from 'twojs-ts/two.min';
 import downloadjs from 'downloadjs';
 
+// tslint:disable:component-selector
 @Component({
-  // tslint:disable-next-line:component-selector
   selector: 'ngx-svg-canvas',
   templateUrl: './ngx-svg-canvas.component.html',
   styleUrls: ['./ngx-svg-canvas.component.scss']
