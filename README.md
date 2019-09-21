@@ -163,9 +163,11 @@ npm install @m-serve/ngx-svg-canvas --save
 
 the `ngx-svg-canvas` component supports the following input properties:
 
-    | Input | Type | Default | Description |
-    | ----- | ---- | ------- | ----------- |
-    | gridSize | number | `0` | size of the background grid, hidden if `0` |
+  | Input | Type | Default | Description |
+  | ----- | ---- | ------- | ----------- |
+  | gridSize | number | `0` | size of the background grid, hidden if `0` |
+  | gridColor | string | `#6dcff6` | color of the grid, if enabled |
+
 
 # Demo
 You can clone the repo and then launch a demo page in your local machine:
