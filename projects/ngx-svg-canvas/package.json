@@ -1,6 +1,6 @@
 {
   "name": "@mserve/ngx-svg-canvas",
-  "version": "0.2.0-beta.3",
+  "version": "0.2.1-beta.6",
   "description": "SVG based Angular Whiteboard Canvas Module",
   "author": "Martin Schleyer",
   "license": "MIT",
@@ -17,8 +17,8 @@
   },
   "peerDependencies": {
     "hammerjs": ">=2.0.0",
-    "@angular/common": "^8.2.4",
-    "@angular/core": "^8.2.4"
+    "@angular/common": ">=8.2.4",
+    "@angular/core": ">=8.2.4"
   },
   "devDependencies": {
     "@types/hammerjs": "^2.0.36"
